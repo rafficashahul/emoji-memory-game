@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: #c0c0f3;
+  --card: #030346;
+  --accent: #7f7fed;
+  --match: #0c0461;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+header,
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #010b3c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:focus {
+  outline: 3px solid rgb(173, 173, 3);
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 2rem;
+  min-height: 0;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.card {
+  width: 110px;
+  height: 110px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-size: 24px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+.card.matched .card-back {
+  background-color: var(--match);
+  color: white;
+  border-color: #03000d;
+}
+
+#moves,
+#pairs {
+  font-size: 1.5rem;
+  margin: 0.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--card);
+}
+.card:focus {
+  outline: 3px solid rgb(173, 173, 3);
+  border-radius: 8px;
+}
+.card.matched .card-back::after {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 18px;
+  animation: pop 0.4s ease-out forwards;
+}

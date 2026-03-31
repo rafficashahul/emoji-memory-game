@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Flip It 🎮</h1>
+      <p>Match emotions with their emojis</p>
+      <button id="newGame">Start Game</button>
+    </header>
+
+    <main>
+      <div id="gameArea" style="display: none">
+        <p>Flip two cards — match emotion with emoji</p>
+        <section id="board"></section>
+        <p id="moves" aria-live="polite">Moves: 0</p>
+        <p id="pairs" aria-live="polite">Pairs: 0</p>
+      </div>
+    </main>
+    <footer>
+      <p>Keep flipping, keep matching ✨</p>
+    </footer>
+  </body>
+</html>
