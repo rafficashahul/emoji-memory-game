@@ -21,8 +21,6 @@ let isLocked = false;
 
 newGame.addEventListener("click", () => {
   gameArea.style.display = "flex";
-  gameArea.style.flexDirection = "column";
-  gameArea.style.alignItems = "center";
   startGame();
 });
 

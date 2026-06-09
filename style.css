@@ -69,6 +69,12 @@ main {
   text-align: center;
   padding: 2rem 1rem;
 }
+#gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
 #board {
   display: grid;
