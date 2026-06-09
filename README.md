@@ -34,8 +34,7 @@ emoji-memory-game/
 ├── index.html
 ├── style.css
 └── app.js
-Live Demo
-Play it here
+
 What I Learned
 
 CSS 3D transforms for card flip animation
@@ -43,7 +42,3 @@ Managing game state with JavaScript (lock, flip, match, reset)
 Accessibility with keyboard navigation and ARIA attributes
 Debugging layout issues between local and GitHub Pages environments
 Using min-height: 100% and flexbox for full-height layouts
-
-Author
-Raffi — Frontend Development student at Kodehode
-GitHub
